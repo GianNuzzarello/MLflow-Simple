@@ -77,9 +77,16 @@ if __name__ == "__main__":
         #predictions = lr.predict(train_x)
         #signature = infer_signature(train_x, predictions)
 
-        # Remote server for mlflow model registry
+        # Remote server for mlflow model registry.
+        # Remember to export:
+        #   1. MFLOW_TRACKING_URI
+        #   2. MFLOW_TRACKING_USERNAME
+        #   3. MFLOW_TRACKING_PASSWORD
+         
         remote_server_tracking_uri = "https://dagshub.com/GianNuzzarello/MLflow-Simple.mlflow"
         mlflow.set_tracking_uri(remote_server_tracking_uri)
+
+
 
         #Running it locally: don't specify tracking URI
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme 
