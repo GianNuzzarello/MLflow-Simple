@@ -1,7 +1,7 @@
 # ML Flow Simple Tutorial
 
 
-## TODO:
+### TODO:
 
 - Add MLflow to S3:
     1. Login to AWS console.
@@ -23,7 +23,7 @@
         pipenv install boto3
         pipenv shell
 
-        ## Then set aws credentials
+        #Then set aws credentials
         aws configure
 
         #Finally
